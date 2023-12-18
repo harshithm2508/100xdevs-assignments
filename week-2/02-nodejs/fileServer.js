@@ -16,6 +16,21 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
+const PORT = 3000;
+
+app.get('/files',(req,res)=>{
+   fs.readdir(path.join(__dirname, './files/'),(err,files)=>{
+    if(err)
+      res.sendStatus(500).json({err : "There was an error in retrieving files."});
+
+      res.json(files);
+   })     
+   
+});
+
+app.listen(PORT,()=>{
+  console.log(`Server is initialized and listening at port : ${PORT}`);
+})
 
 
 module.exports = app;
