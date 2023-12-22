@@ -19,6 +19,7 @@ setInterval(() => {
 }, 1000)
 
 function rateLimitter(req,res,next){
+    const userId = req.headers["user-id"];
     
 }
 

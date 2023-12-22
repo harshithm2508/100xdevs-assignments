@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('your-mongodb-url');
+mongoose.connect('mongodb+srv://harshithm2508:harshith25@tutcluster.usz8o0m.mongodb.net/?retryWrites=true&w=majority');
 
 // Define schemas
 const AdminSchema = new mongoose.Schema({
     // Schema definition here
+    
 });
 
 const UserSchema = new mongoose.Schema({
